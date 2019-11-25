@@ -1,0 +1,26 @@
+<div fxLayout="row" fxLayoutAlign="center center"  class="login-wrapper">
+    <div fxFlex="80%" fxFlex.lt-md="100%" class="flex-wrapper">
+        <div class="qc_loginhead">
+            <img src="../../assets/van_logo.png">
+          </div>
+        
+              <mat-card class="qc_login-card">
+                <mat-card-content>
+                  <form>
+                    <h2> login </h2>
+                    <mat-form-field  appearance="outline" >
+                      <input matInput placeholder="User" formControlName="userName" >
+                     
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" >
+                      <input matInput type="password" placeholder="Password" formControlName="password" >
+                     
+                    </mat-form-field>
+                    <a (click)="gohome()"><button mat-raised-button color="primary" type="submit">Login</button></a>
+                  </form>
+                </mat-card-content>
+              </mat-card>
+           </div>
+    </div>
+  
+                

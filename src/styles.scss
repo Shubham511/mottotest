@@ -1,0 +1,653 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './theme.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+$custom-typography: mat-typography-config(
+  $font-family: 'poppins'
+);
+
+@include mat-core($custom-typography);
+
+$primary: mat-palette($mat-green, 600);
+$accent:  mat-palette($mat-grey, 100);
+$warn:    mat-palette($mat-red, A700);
+
+$theme: mat-light-theme($primary, $accent);
+
+
+@include angular-material-theme($theme);
+
+.m2app-dark {
+  $primary: mat-palette($mat-pink, 700, 500, 900);
+  $accent:  mat-palette($mat-blue-grey, A200, A100, A400);
+  $warn:    mat-palette($mat-red, A700);
+
+  $theme:   mat-dark-theme($primary, $accent, $warn);
+
+  @include angular-material-theme($theme);
+}
+
+$app-primary: mat-palette($mat-indigo);
+$app-accent: mat-palette($mat-green);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Lato', sans-serif; }
+  
+  html,
+body {
+	max-width: 100%;
+	height: 100%;
+}
+
+mat-form-field,
+mat-table,
+.mat-form-field {
+	font-family: 'Lato', sans-serif;
+}
+
+a, a:visited {
+	color: #008000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #444;
+}
+
+svg.material-icons:not(:last-child) {
+	margin-right: 8px;
+}
+
+.card svg.material-icons path {
+	fill: #888;
+}
+
+
+/*global overrides start*/
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+	color: rgba(0, 0, 0, 0.4)!important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+	padding: 0.5em 0 0.5em 0 !important;
+	top: -0.5em;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+	margin-top: 0em !important;
+}
+
+.mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+	transform: translateY(25%) !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-suffix {
+	top: .1em !important;
+}
+.mat-select-placeholder {
+    color: rgb(102, 102, 102);
+}
+
+
+/*global overrides end*/
+
+.spacer {
+	flex: 1;
+}
+
+
+/* Login Page */
+
+.qc_login-card {
+	max-width: 350px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 25px !important;
+}
+
+.qc_loginhead {
+	max-width: 400px;
+	margin: 0 auto 2em;
+	text-align: center;
+}
+
+.login-wrapper {
+	background-color: #ffeeb8;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.login-wrapper h2 {
+	font-size: 1.6rem;
+	padding: 1rem 0;
+	text-transform: uppercase;
+	color: #029220;
+	font-weight: 600;
+}
+
+.toolbar {
+	height: 80px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	color: white;
+	font-weight: 600;
+	padding: 0;
+	position: sticky;
+	position: -webkit-sticky;
+	/* For macOS/iOS Safari */
+	top: 0;
+	/* Sets the sticky toolbar to be on top */
+	z-index: 1000;
+	/* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.toolbar img {
+	margin: 0;
+	width: 250px;
+}
+
+.toolbar a {
+	color: green;
+	margin: 0;
+	padding-left: 35px;
+	margin-left: 35px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+
+.toolbar a:hover {
+	opacity: 0.8;
+}
+
+.toolbar a span {
+	display: flex;
+	align-items: center;
+	padding-left: 7px;
+}
+
+.toolbar .qc_headlogin {
+	background: green;
+	color: #fff !important;
+	width: 100px;
+	height: 80px;
+	place-content: center;
+	padding-left: 15px;
+}
+
+.content {
+	background-color: #ffeeb8;
+	background-size: contain;
+	background-repeat: repeat;
+	width: 100%;
+	min-height: 100vh;
+	background-attachment: fixed;
+	position: relative;
+}
+
+svg.material-icons {
+	height: 24px;
+	width: auto;
+}
+
+.form_container {
+	margin: 50px 0;
+	background: #fff;
+	padding: 50px;
+	border-radius: 10px;
+	position: relative;
+	z-index: 9;
+}
+
+.qc_heading {
+	font-size: 1.6rem;
+	padding: 1rem 0;
+	color: #029220;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	text-align: left;
+	width: 100%;
+}
+
+.qc_heading_sm {
+	font-size: 1.2rem;
+	padding: 1rem 0;
+	color: #029220;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	text-align: left;
+	width: 100%;
+}
+
+.qc_date {
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 1rem 0;
+	width: 100%;
+	text-align: right;
+}
+
+mat-form-field {
+	width: 100%;
+	min-width: 200px;
+}
+
+.mt-5 {
+	margin-top: 30px;
+}
+.my-1{margin: 10px 0;}
+
+.my-5 {
+	margin: 30px 0;
+}
+
+.pr-15 {
+	padding-right: 15px;
+}
+.py-60{
+	padding: 60px 0;
+}
+
+.txt-center {
+	text-align: center !important;
+	margin-bottom: 0;
+}
+
+.ml-15 {
+	margin-left: 15px !important;
+}
+
+.qc_left .mat-figure {
+	justify-content: start !important;
+	top: -10px !important;
+}
+
+.form_container .mat-form-field mat-icon {
+	font-size: 125% !important;
+	opacity: 0.5;
+}
+
+.mat-table {
+	width: 100%;
+}
+
+.qc_rivewtable .mat-header-cell {
+	font-size: 14px;
+	font-weight: 600;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+	text-align: center;
+	color: #008000;
+    padding: 4px 2px;
+}
+
+
+
+.qc_rivewtable tr.mat-header-row {
+	height: 30px;
+	
+}
+.qc_rivewtable  th.mat-header-cell:first-of-type, 
+.qc_rivewtable td.mat-cell:first-of-type {    padding-left: 5px;}
+
+.qc_rivewtable  td.mat-cell:last-of-type, .qc_rivewtable td.mat-footer-cell:last-of-type, .qc_rivewtable th.mat-header-cell:last-of-type {
+    padding-right: 5px;
+}
+
+.qc_rivewtable  th.mat-header-cell:last-of-type, 
+.qc_rivewtable td.mat-cell:last-of-type {    border-right: 1px solid rgba(0, 0, 0, 0.12); }
+
+.qc_rivewtable td.mat-cell, .qc_rivewtable td.mat-footer-cell, .qc_rivewtable th.mat-header-cell{
+	border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.qc_rivewtable tr.mat-row {
+	height: 40px;
+}
+.qc_rivewtable td.mat-cell{
+	padding: 0 5px;
+}
+
+.qc_rivewtable tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.qc_med-card {
+	width: 100%;
+	background: green;
+	color: #fff;
+	padding: 10px !important;
+	font-family: 'Lato', sans-serif;
+}
+.qc_card-x {
+    padding: 0;
+    text-align: right;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.qc_med-card mat-card-title {
+	font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+.qc_med-card  mat-form-field {
+	width: 50px;
+	min-width: 50px;
+	color: #fff;
+	line-height: 1;
+	
+}
+.qc_inline{float: left; margin: 10px 10px 0 0;}
+.qc_med-card .mat-select-arrow , 
+.qc_med-card .mat-select-value,
+.qc_med-card .mat-form-field-appearance-legacy,
+.qc_med-card .mat-form-field-label {
+    color:  #fff;
+}
+.qc_med-card .mat-select-placeholder {
+    color: #ffffff;
+}
+.qc_med-card  .mat-form-field-wrapper{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.qc_med-card mat-card-subtitle {
+	float: left;
+	color: #fff;
+	padding: 0 10px;
+	margin: 0;
+	border-radius: 4px;
+}
+.qc_med-card .mat-form-field-appearance-outline .mat-form-field-infix {
+	padding: 0.3em 0 0.3em 0 !important;
+	top: -0.3em;
+}
+.qc_med-card  .mat-form-field-appearance-outline .mat-form-field-outline {
+	color: rgba(255, 255, 255, 0.4)!important;
+}
+
+
+.qc_med-card .mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+	transform: translateY(5%) !important;
+}
+
+
+.qc_med-card .mat-list-item {
+	color: #fff;
+	font-size: 0.9rem;
+}
+
+.qc_med-card .mat-card-actions .mat-raised-button {
+	float: right;
+}
+
+.qc_med-card .mat-list-base .mat-list-item .mat-list-item-content {
+	padding: 0;
+}
+
+.qc_med-card .mat-list-base .mat-list-item {
+	height: 30px;
+}
+
+.form_container .qc_med-card mat-icon {
+	font-size: 100% !important;
+	opacity: 0.5;
+	position: relative;
+	top: 2px;
+}
+
+.form_container .qc_print mat-icon {
+	font-size: 125% !important;
+	opacity: 0.5;
+	position: relative;
+	top: 5px;
+	left: -5px;
+}
+
+.qc_invoice {
+	max-width: 100%;
+	background :transparent;
+	color: #444;
+	padding: 10px 0 50px !important;
+	font-family: 'Lato', sans-serif;
+}
+.qc_invoice-bg{background-image: url(../src/assets/letter_pad.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+height: 1132px;
+position: relative;}
+	
+.qc_absolute{
+position: absolute;
+top: 165px;
+right: 0;
+width: 580px;
+height: auto;
+padding: 0 30px;
+}
+.qc_in-date{
+	text-align: right;
+	padding: 15px;
+}
+.qc_in-name{
+	width: 100%;
+	float: left;
+}
+.qc_in-name p{
+	display: inline-block;
+	margin-top: 7px;
+}
+.qc_in-name .qc_txt-left{
+float: left;
+}
+.qc_in-name .qc_txt-left p{
+	padding-left:20px ;
+	}
+.qc_in-name .qc_txt-right{
+	float: right;
+	padding-right:20px ;
+	}
+.qc_in-name .qc_txt-right p{
+		padding-left:10px ;
+		}
+.qc_in-list-d{
+	width: 100%;
+	float: left;
+}
+.qc_in-list-d ul{ 
+	padding: 30px 0;
+	columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  font-size: 1.05rem;
+}
+.qc_in-list-d li{
+	list-style-type: none;
+	padding: 0.2em 0;
+    font-size: 0.9em;
+}
+.qc_in-list-d li span{
+	font-weight: 700;
+}
+.qc_medlist{
+border-bottom: 1px solid #eee;
+widows: 100%;
+float: left;
+margin-bottom: 25px;
+}
+.qc_duration h5{
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.1rem;
+	width: 100%;
+	margin-top: 30px;
+}
+.qc_signature {
+	float: right;
+	margin-top: 50px;
+}
+ul.qc_medlist-in{
+	position: relative;
+    width: 100%;
+	float: left;
+}
+ul.qc_medlist-in li {
+    font-size: 0.9rem;
+    font-weight: 500;
+	list-style-type: none;
+	padding: 5px 0 5px 15px;
+    border-bottom: 1px dotted rgba(229, 229, 231, 0.76);
+	
+}
+ul.qc_medlist-in li .qc_medlist-qty{
+	float: right;
+}
+ul.qc_medlist-in li .qc_medlist-num{
+	position: absolute;
+    left: -5px;
+    top: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+ul.qc_medlist-down {
+    padding: 10px 15px 5px 15px;
+    width: 100%;
+    position: relative;
+    float: left;
+	columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  
+}
+ul.qc_medlist-down li{
+	padding-bottom: 5px;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+
+ .qc_invioestable {
+	width: 100%;
+	padding: 30px 0;
+}
+
+ .qc_invioestable tr td {
+	border: 1px solid #aaa;
+	padding: 4px;
+	font-size: 0.8em;
+}
+
+.qc_invoice-bill {
+	max-width: 100%;
+	background :#fff;
+	color: #444;
+	padding: 10px 0 50px !important;
+	font-family: 'Lato', sans-serif;
+}
+.qc_invoice-bill .mat-list-base .mat-list-item {
+	height: 30px;
+}
+
+.qc_invoice-bill .mat-list-base .mat-list-item p span {
+	font-weight: 700;
+}
+
+.qc_invoice-bill .mat-grid-tile .mat-figure {
+	justify-content: start;
+	
+}
+.qc_invoice-bill .qc_invioestable {
+	width: 100%;
+	padding: 30px 5px;
+}
+
+.qc_invoice-bill .qc_invioestable tr td {
+	border: 1px solid #aaa;
+	padding: 10px;
+	font-size: 1rem;
+}
+
+.qc_billtotal {
+	width: 100%;
+	padding: 0px 5px;
+}
+
+.qc_billtotal tr td {
+	border: none;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 1em;
+}
+
+
+
+.card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+footer {
+	margin-top: 0;
+	line-height: 20px;
+	font-size: 0.8em;
+	background: #ffeeb8;
+	padding: 10px 0;
+}
+
+footer a {
+	display: flex;
+	align-items: center;
+	font-size: 0.8em;
+}

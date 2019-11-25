@@ -1,0 +1,93 @@
+
+  
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="../../assets/van_logo.png"
+    />
+    
+      <div class="spacer"></div>
+    
+      <div fxLayout="row" fxLayoutAlign="end center" >  
+    <a (click)="goaddfind()"><mat-icon aria-hidden="false" aria-label=" supervised_user_circle icon"> supervised_user_circle</mat-icon> <span>Consultation</span></a>
+    <a (click)="goreviewdet()"><mat-icon aria-hidden="false" aria-label="description icon icon"> description icon</mat-icon> <span>Invoice</span></a>
+      </div>
+    
+    <a (click)="gologin()" class="qc_headlogin">Login <mat-icon aria-hidden="false" aria-label="keyboard_arrow_down icon"> keyboard_arrow_down</mat-icon></a>
+  </div>
+  
+  <div class="content" role="main">
+
+    <div class="card-container">
+        <div fxLayout="row wrap " fxLayoutAlign="center center" class="layout-wrapper">
+            <div fxFlex="40%" fxFlex.lt-md="100%" class="flex-wrapper py-60">
+                <mat-grid-list cols="1" rowHeight="70px" gutterSize="15px">
+                    <h2 class="qc_heading txt-center"> Receptionist</h2>
+                </mat-grid-list>
+                <mat-grid-list cols="2" rowHeight="120px" gutterSize="15px">
+                    <mat-grid-tile>
+                        <a class="card" target="_blank" rel="noopener" (click)="goaddfind()">
+                          
+                    
+                          <span>New Patient</span>
+                    
+                          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <a class="card" target="_blank" rel="noopener" (click)="gofinedetails()">
+                          
+                    
+                          <span>Exiting Patient</span>
+                    
+                          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        </a>
+                    </mat-grid-tile>
+                    
+                  </mat-grid-list>
+                  <mat-grid-list cols="1" rowHeight="70px" gutterSize="15px">
+                      <h2 class="qc_heading txt-center"> Dr. / Van Store</h2>
+                  </mat-grid-list>
+                  <mat-grid-list cols="2" rowHeight="120px" gutterSize="15px">
+                      <mat-grid-tile>
+                          <a class="card" target="_blank" rel="noopener" (click)="gopatientinfo()">
+                            
+                      
+                            <span>Dr. Portal</span>
+                      
+                            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
+                      </mat-grid-tile>
+                      <mat-grid-tile>
+                          <a class="card" target="_blank" rel="noopener" (click)="gomedicine()">
+                            
+                      
+                            <span>Van Store Protalt</span>
+                      
+                            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                          </a>
+                      </mat-grid-tile>
+                    </mat-grid-list>
+            </div>
+        </div>
+      
+     
+  
+    </div>
+    
+      
+  
+    
+  
+    
+  
+    
+  </div>
+    <!-- Footer -->
+    <footer  fxLayout="row" fxLayoutAlign="center end">
+        © Copyright 2019.
+       
+    </footer>
+  
+  
+ 
